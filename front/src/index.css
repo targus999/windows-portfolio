@@ -1,0 +1,12 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* Add fallback fonts in case 'Segoe UI' is not available */
+}
+#root {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width:100%;
+    height:100%;
+    overflow: hidden; 
+  }

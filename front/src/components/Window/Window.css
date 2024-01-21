@@ -1,0 +1,19 @@
+.window-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* border: 1px solid rgb(248, 248, 248); */
+  background: linear-gradient(90deg, #ffffff66, #0000001a, #ffffff33), #4580c4;;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.content {
+  width: 700px;
+  height: 500px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 0 1px #fff9;
+  margin: 0 6px 6px;
+}

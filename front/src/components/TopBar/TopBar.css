@@ -1,0 +1,11 @@
+.top-bar{
+    border: 3px solid black;
+    width:auto;
+    height:7%;
+}
+.right-buttons{
+    position:fixed;
+    right:0;
+    top:0;
+    color:blue;
+}

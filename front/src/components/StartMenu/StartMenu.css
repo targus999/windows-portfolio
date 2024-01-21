@@ -1,0 +1,22 @@
+/* Style for StartMenu component */
+.start-menu-content {
+    position: fixed;
+    bottom: 7%; /* Height of the taskbar */
+    left: 0;
+    height:65%;
+    width: 25%; /* Set a specific width for the start menu */
+    background-color: #f0f0f0; /* Light gray background */
+    border: 1px solid #c0c0c0; /* Light gray border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift */
+    opacity: 0.8;
+    z-index: 3; /* Higher z-index than the taskbar */
+    padding: 8px; /* Add padding for content */
+  }
+  
+  /* Style for individual items in the StartMenu */
+  
+  
+  /* .start-menu-content p:hover {
+    background-color: #d0d0d0; /* Light gray background on hover */
+  
+  
