@@ -1,7 +1,7 @@
 import './App.css';
 import "7.css/dist/7.css";
 import TaskBar from'./components/TaskBar/TaskBar';
-import {useSelector,useDispatch} from 'react-redux';
+import {useSelector} from 'react-redux';
 import backgroundImage from './flag.png'
 
 import Window from './components/Window/Window';
@@ -9,7 +9,7 @@ import DesktopIcons from './components/DesktopIcons/DesktopIcons';
 import { useEffect } from 'react';
 
 function App() {
-  const dispatch=useDispatch();
+  
   useEffect(() => {
     const preventDefaultDrag = (event) => {
       event.preventDefault();
@@ -40,7 +40,7 @@ function App() {
         <DesktopIcons></DesktopIcons>  
         <TaskBar></TaskBar>
         {useSelector((state) => state.apps)?.map((i,key)=>
-          i.active?<Window key={key} name={i.name}></Window>:' '
+          i.active && <Window key={key} app={i}></Window>
         )}
         
         

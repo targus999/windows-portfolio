@@ -5,7 +5,8 @@ const initialState = {
     { name: "Resume.png", active: false, minimize: false },
     { name: "My Hobbies", active: false, minimize: false },
   ],
-}; 
+  activeApps: [],
+};
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
@@ -14,11 +15,39 @@ const reducer = (state = initialState, action) => {
         ...state,
         top: action.top,
       };
-      case "addToActiveApps":
+      case "maximizeApp":
+      return {
+        ...state,
+        apps: state.apps.map((app) => {
+          if (app.name === action.appName) {
+            console.log(action.appName,' false');
+            return {
+              ...app,
+              minimize: !app.minimize,
+            };
+          }
+          return app;
+        }),
+      };
+      case "minimizeApp":
+      return {
+        ...state,
+        apps: state.apps.map((app) => {
+          if (app.name === action.appName) {
+            return {
+              ...app,
+              minimize: true,
+            };
+          }
+          return app;
+        }),
+      };
+    case "addToActiveApps":
+      if (!state.activeApps.some((app) => app.name === action.newApp.name))
         return {
           ...state,
           apps: state.apps.map((app) => {
-            if (app.name === action.newApp) {
+            if (app.name === action.newApp.name) {
               return {
                 ...app,
                 active: true,
@@ -26,19 +55,22 @@ const reducer = (state = initialState, action) => {
             }
             return app;
           }),
+          activeApps: [...state.activeApps, action.newApp],
         };
     case "removeFromActiveApps":
       return {
         ...state,
-        apps: state.apps.map((app)=>{
-          if(app.name==action.oldApp){
+        apps: state.apps.map((app) => {
+          if (app.name === action.oldApp) {
             return {
               ...app,
               active: false,
             };
-        }
-        return app;
-      }
+          }
+          return app;
+        }),
+        activeApps: state.activeApps.filter(
+          (app) => app.name !== action.oldApp
         ),
       };
     default:

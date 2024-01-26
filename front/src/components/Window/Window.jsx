@@ -4,9 +4,9 @@ import "./Window.css";
 import { useSelector, useDispatch } from "react-redux";
 import Draggable from "react-draggable";
 import TopBar from "../TopBar/TopBar";
-import { removeFromActiveApps, setTop } from "../../redux/actions";
+import {setTop } from "../../redux/actions";
 
-const Window = ({ name }) => {
+const Window = ({ app }) => {
   const dispatch = useDispatch();
   const screenBounds = {
     left: 0,
@@ -16,7 +16,8 @@ const Window = ({ name }) => {
   };
 
   const styling = {
-    zIndex: useSelector((state) => state.top) == name ? "1" : "0",
+    zIndex: useSelector((state) => state.top) === app.name ? "1" : "0",
+    display: app.minimize?'none':'block'
   };
 
   const initialPosition = {
@@ -25,10 +26,10 @@ const Window = ({ name }) => {
   };
 
   const setAsTop = () => {
-    dispatch(setTop(name));
+    dispatch(setTop(app.name));
   };
 
-
+  
   return ReactDOM.createPortal(
     <Draggable
       onMouseDown={() => setAsTop()}
@@ -38,7 +39,7 @@ const Window = ({ name }) => {
     >
       <div className="window-box" style={styling}>
         <strong className="cursor glass active">
-          <TopBar name={name}></TopBar>
+          <TopBar name={app.name}></TopBar>
         </strong>
         <div className="content">
 

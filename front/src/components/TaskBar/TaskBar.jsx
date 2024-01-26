@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./TaskBar.css";
 import startIcon from "./start-button.png";
 import StartMenu from "../StartMenu/StartMenu";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector} from "react-redux";
 import TaskItem from "../TaskItem/TaskItem";
 
 const TaskBar = () => {
@@ -23,8 +23,8 @@ const TaskBar = () => {
             />
           </div>
           <div className="start-apps-container">
-            {useSelector((state) => state.apps).map(
-              (app) => app.active && <TaskItem app={app} key={app.id} />
+            {useSelector((state) => state.activeApps).map(
+              (app,key) => <TaskItem app={app} key={key} />
             )}
           </div>
         </div>
