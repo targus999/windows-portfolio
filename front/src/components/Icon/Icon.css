@@ -1,12 +1,40 @@
 .icon{
-    
+    margin-top: 10%;
+    margin-left:10%;
     z-index: inherit;
     height:15%;
-    border: 1px dotted black;
+    
 }
-/* .icon-text{
+.desktop {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .desktop-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    width: 70%;
     
+  }
+  
+  .desktop-icon:hover {
+    filter: brightness(1.3);
     
+  }
+  
+  .desktop-icon.selected {
+    border: 1px dotted #000102;
+    /* border: 2px solid rgba(0, 120, 212, 0.7); */
+    background-color: rgba(173, 216, 230, 0.2);
     
-
-} */
+  }
+  
+  .desktop-icon img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 8px;
+  }

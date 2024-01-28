@@ -6,6 +6,8 @@ const initialState = {
     { name: "My Hobbies", active: false, minimize: false },
   ],
   activeApps: [],
+  isSelected:"",
+  showStartBar:false,
 };
 
 const reducer = (state = initialState, action) => {
@@ -14,6 +16,21 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         top: action.top,
+      };
+      case "setSelected":
+      return {
+        ...state,
+        isSelected: action.selectedApp,
+      };
+      case "setStart":
+      return {
+        ...state,
+        showStartBar: false,
+      };
+      case "toggleStart":
+      return {
+        ...state,
+        showStartBar: !state.showStartBar,
       };
       case "maximizeApp":
       return {
