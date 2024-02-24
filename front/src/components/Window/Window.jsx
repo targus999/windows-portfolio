@@ -4,7 +4,8 @@ import "./Window.css";
 import { useSelector, useDispatch } from "react-redux";
 import Draggable from "react-draggable";
 import TopBar from "../TopBar/TopBar";
-import {setTop } from "../../redux/actions";
+import { setTop } from "../../redux/actions";
+import PdfViewer from "../PdfViewer/PdfViewer";
 
 const Window = ({ app }) => {
   const dispatch = useDispatch();
@@ -17,7 +18,7 @@ const Window = ({ app }) => {
 
   const styling = {
     zIndex: useSelector((state) => state.top) === app.name ? "1" : "0",
-    display: app.minimize?'none':'block'
+    display: app.minimize ? "none" : "block",
   };
 
   const initialPosition = {
@@ -29,7 +30,6 @@ const Window = ({ app }) => {
     dispatch(setTop(app.name));
   };
 
-  
   return ReactDOM.createPortal(
     <Draggable
       onMouseDown={() => setAsTop()}
@@ -42,7 +42,31 @@ const Window = ({ app }) => {
           <TopBar name={app.name}></TopBar>
         </strong>
         <div className="content">
+          {(() => {
+            switch (app.name) {
+              case "My Expertise":
+                return (
+                  <>
+                    <h1>EXP</h1>
+                  </>
+                );
 
+              case "Resume.pdf":
+                return (
+                    <PdfViewer></PdfViewer>
+                );
+
+              case "My Hobbies":
+                return (
+                  <>
+                    <h1>HOBBY</h1>
+                  </>
+                );
+
+              default:
+                return null; // or any other default JSX content
+            }
+          })()}
         </div>
       </div>
     </Draggable>,

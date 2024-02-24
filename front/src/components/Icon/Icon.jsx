@@ -1,6 +1,5 @@
 import React from "react";
 import "./Icon.css";
-import icon from './folder.png'
 import { useDispatch, useSelector } from "react-redux";
 import { addToActiveApps, setSelected, setTop } from "../../redux/actions";
 import { useState } from "react";
@@ -25,7 +24,7 @@ const Icon = ({ appName }) => {
         className={`desktop-icon ${useSelector((state) => state.isSelected)==appName ? "selected" : ""}`}
         onClick={handleIconClick}
       >
-        <img src={icon}  alt={appName.png} />
+        <img src={`${appName}.png`}  alt={appName.png} />
         <p>{appName }</p>
       </div>
     </div>

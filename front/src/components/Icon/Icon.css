@@ -22,7 +22,7 @@
   }
   
   .desktop-icon:hover {
-    filter: brightness(1.3);
+    filter: brightness(1.2);
     
   }
   
@@ -36,5 +36,5 @@
   .desktop-icon img {
     width: 64px;
     height: 64px;
-    margin-bottom: 8px;
+    margin-top: 8px;
   }
