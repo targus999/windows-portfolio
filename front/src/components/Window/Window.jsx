@@ -6,6 +6,7 @@ import Draggable from "react-draggable";
 import TopBar from "../TopBar/TopBar";
 import { setTop } from "../../redux/actions";
 import PdfViewer from "../PdfViewer/PdfViewer";
+import Notepad from "../Notepad/Notepad";
 
 const Window = ({ app }) => {
   const dispatch = useDispatch();
@@ -46,9 +47,7 @@ const Window = ({ app }) => {
             switch (app.name) {
               case "My Expertise":
                 return (
-                  <>
-                    <h1>EXP</h1>
-                  </>
+                  <Notepad></Notepad>
                 );
 
               case "Resume.pdf":
