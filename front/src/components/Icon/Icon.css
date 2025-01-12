@@ -23,11 +23,10 @@
   
   .desktop-icon:hover {
     filter: brightness(1.2);
-    
   }
   
   .desktop-icon.selected {
-    border: 1px dotted #000102;
+    /* border: 1px dotted #000102; */
     /* border: 2px solid rgba(0, 120, 212, 0.7); */
     background-color: rgba(173, 216, 230, 0.2);
     

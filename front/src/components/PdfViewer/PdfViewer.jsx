@@ -5,7 +5,7 @@ import '@react-pdf-viewer/default-layout/lib/styles/index.css';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 
 const PdfViewer = () => {
-  const pdfUrl = 'AkshayResume.pdf'; 
+  const pdfUrl = 'documents/AkshayResume.pdf'; 
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
  
   return (

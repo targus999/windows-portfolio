@@ -4,7 +4,7 @@ import "./Window.css";
 import { useSelector, useDispatch } from "react-redux";
 import Draggable from "react-draggable";
 import TopBar from "../TopBar/TopBar";
-import { setTop } from "../../redux/actions";
+import { setStart, setTop } from "../../redux/actions";
 import PdfViewer from "../PdfViewer/PdfViewer";
 import Notepad from "../Notepad/Notepad";
 
@@ -29,6 +29,7 @@ const Window = ({ app }) => {
 
   const setAsTop = () => {
     dispatch(setTop(app.name));
+    dispatch(setStart())
   };
 
   return ReactDOM.createPortal(

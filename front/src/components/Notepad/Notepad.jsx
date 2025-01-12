@@ -9,13 +9,13 @@ FRONTEND
 3.CSS(Bootstrap)
 4.JSX
 5.Penpot(UI/UX)
-6.AngularJS
+6.Typescript
 
 BACKEND
 1.NodeJS
 2.ExpressJS
-3.Springboot
-4.Javascript
+3.Solidty(Block chain)
+4.Javascript 
 5.MongoDB
 6.WebSocket
 7.KafkaJS
@@ -26,7 +26,7 @@ DEVOPS
 3.Ansible
 
 CLOUD
-1.AWS(AWS Certified)
+1.AWS Cloud
 2.Azure Cloud(AZ-900 certified)
 
 OTHERS
@@ -47,9 +47,7 @@ IN NEAR FUTURE
 1.GraphQL
 2.Terraform
 3.AWS S3/SNS
-4.Typesript
-5.React Native
-6.
+4.
 `);
 
   const handleChange = (event) => {
