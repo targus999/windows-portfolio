@@ -46,7 +46,7 @@ const Window = ({ app }) => {
         <div className="content">
           {(() => {
             switch (app.name) {
-              case "My Expertise":
+              case "My Skills":
                 return (
                   <Notepad></Notepad>
                 );

@@ -1,7 +1,7 @@
 const initialState = {
   top: [],
   apps: [
-    { name: "My Expertise", active: false, minimize: false },
+    { name: "My Skills", active: false, minimize: false },
     { name: "Resume.pdf", active: false, minimize: false },
     { name: "My Hobbies", active: false, minimize: false },
   ],

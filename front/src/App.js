@@ -19,11 +19,16 @@ function App() {
     const preventDefaultDrag = (event) => {
       event.preventDefault();
     };
+    const disableRightClick = (event) => {
+      event.preventDefault();
+    };
 
+    document.addEventListener("contextmenu", disableRightClick);
     document.addEventListener("dragstart", preventDefaultDrag);
     document.body.style.userSelect = "none";
     // Cleanup the event listener on component unmount
     return () => {
+      document.removeEventListener("contextmenu", disableRightClick);
       document.removeEventListener("dragstart", preventDefaultDrag);
       document.body.style.userSelect = "";
     };

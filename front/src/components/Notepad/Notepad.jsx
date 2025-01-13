@@ -18,16 +18,16 @@ const Notepad = () => {
   return (
     <div style={{ width: "700px", height: "500px" }}>
       <ul role="menubar">
-        <li role="menuitem" tabindex="0">
+        <li role="menuitem" tabIndex="0">
           File
         </li>
-        <li role="menuitem" tabindex="0">
+        <li role="menuitem" tabIndex="0">
           Edit
         </li>
-        <li role="menuitem" tabindex="0">
+        <li role="menuitem" tabIndex="0">
           View
         </li>
-        <li role="menuitem" tabindex="0">
+        <li role="menuitem" tabIndex="0">
           Help
         </li>
       </ul>
