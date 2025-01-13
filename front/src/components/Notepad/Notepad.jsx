@@ -1,54 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Notepad = () => {
-  const [text, setText] = useState(`SKILLS
-  
-FRONTEND
-1.ReactJS
-2.HTML
-3.CSS(Bootstrap)
-4.JSX
-5.Penpot(UI/UX)
-6.Typescript
-
-BACKEND
-1.NodeJS
-2.ExpressJS
-3.Solidty(Block chain)
-4.Javascript 
-5.MongoDB
-6.WebSocket
-7.KafkaJS
-
-DEVOPS
-1.Docker(Rancher/Docker desktop)
-2.Kubernetes
-3.Ansible
-
-CLOUD
-1.AWS Cloud
-2.Azure Cloud(AZ-900 certified)
-
-OTHERS
-1.Linux(WSL/Ubuntu)
-2.WebRTC
-3.Augmented Reality
-4.Unity3D
-5.Python
-6.C/C++
-
-LINGUISTIC
-1.English
-2.Hindi
-3.Malayalam
-4.Japanese
-
-IN NEAR FUTURE
-1.GraphQL
-2.Terraform
-3.AWS S3/SNS
-4.
-`);
+  const [text, setText] = useState();
+   
+    // Load the text from the txt file when the component mounts
+    useEffect(() => {
+      fetch("/documents/skills.txt") // Path to the file inside public folder
+        .then((response) => response.text()) // Read the file as text
+        .then((data) => setText(data)) // Set the content into the state
+        .catch((error) => console.error("Error loading file:", error));
+    }, []);
 
   const handleChange = (event) => {
     setText(event.target.value);

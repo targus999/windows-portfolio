@@ -1,0 +1,47 @@
+SKILLS
+  
+FRONTEND
+1.ReactJS
+2.HTML
+3.CSS(Bootstrap)
+4.JSX
+5.Penpot(UI/UX)
+6.Typescript
+
+BACKEND
+1.NodeJS
+2.ExpressJS
+3.Solidty(Block chain)
+4.Javascript 
+5.MongoDB
+6.WebSocket
+7.KafkaJS
+
+DEVOPS
+1.Docker(Rancher/Docker desktop)
+2.Kubernetes
+3.Ansible
+
+CLOUD
+1.AWS Cloud
+2.Azure Cloud(AZ-900 certified)
+
+OTHERS
+1.Linux(WSL/Ubuntu)
+2.WebRTC
+3.Augmented Reality
+4.Unity3D
+5.Python
+6.C/C++
+
+LINGUISTIC
+1.English
+2.Hindi
+3.Malayalam
+4.Japanese
+
+IN NEAR FUTURE
+1.GraphQL
+2.Terraform
+3.AWS S3/SNS
+4.
