@@ -11,24 +11,21 @@
   /* border: 1px solid #aaa; */
   border-top-left-radius: 10px; /* Apply border radius to top-left corner */
   border-top-right-radius: 10px; /* Apply border radius to top-right corner */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(
+    to top,
+    hsla(207, 97%, 14%, 0.603) 80%, /* Start with original color */
+    hsla(207, 97%, 14%, 0.856) 100%   /* Fully transparent at the top */
+  );
+  box-shadow: 1px 0px 1px 1px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  
+  border: 1px solid rgba(255, 255, 255, 0.3);
   z-index: 3; /* Ensure it's above other elements */
   padding: 10px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.start-menu-content::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  opacity: 0.85;
-  bottom: 0;
-  background-color: rgb(32, 32, 32); 
-  z-index: -1; /* Place the background behind the content */
-  border-top-left-radius: 10px; /* Apply border radius to top-left corner */
-  border-top-right-radius: 10px; /* Apply border radius to top-right corner */
-}
+
 
 /* Profile Section */
 .profile-section {

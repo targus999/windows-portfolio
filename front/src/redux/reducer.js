@@ -37,7 +37,19 @@ const reducer = (state = initialState, action) => {
         ...state,
         apps: state.apps.map((app) => {
           if (app.name === action.appName) {
-            console.log(action.appName,' false');
+            return {
+              ...app,
+              minimize: false,
+            };
+          }
+          return app;
+        }),
+      };
+      case "toggleApp":
+      return {
+        ...state,
+        apps: state.apps.map((app) => {
+          if (app.name === action.appName) {
             return {
               ...app,
               minimize: !app.minimize,

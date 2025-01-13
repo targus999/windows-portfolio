@@ -1,7 +1,7 @@
 import React from "react";
 import "./Icon.css";
 import { useDispatch, useSelector } from "react-redux";
-import { addToActiveApps, setSelected, setStart, setTop } from "../../redux/actions";
+import { addToActiveApps, maximizeApp, minimizeApp, setSelected, setStart, setTop } from "../../redux/actions";
 import { useState } from "react";
 
 const Icon = ({ appName }) => {
@@ -15,8 +15,10 @@ const Icon = ({ appName }) => {
 
   const openApp = () => {
     const app = { name: appName };
+
     dispatch(addToActiveApps(app));
     dispatch(setTop(appName));
+    dispatch(maximizeApp(appName));
   };
 
   return (

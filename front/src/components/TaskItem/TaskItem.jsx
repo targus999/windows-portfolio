@@ -1,6 +1,6 @@
 import React from "react";
 import "./TaskItem.css";
-import { maximizeApp, setStart, setTop } from "../../redux/actions";
+import { maximizeApp, setStart, setTop, toggleApp } from "../../redux/actions";
 import { useSelector, useDispatch } from "react-redux";
 
 const TaskItem = ({ app }) => {
@@ -8,7 +8,7 @@ const TaskItem = ({ app }) => {
   const top = useSelector((state) => state.top);
   const maximizeWindow = () => {
     if (top == app.name) {
-      dispatch(maximizeApp(app.name));
+      dispatch(toggleApp(app.name));
     } else {
       dispatch(setTop(app.name));
     }
@@ -16,8 +16,8 @@ const TaskItem = ({ app }) => {
   };
 
   return (
-    <div className="item" onClick={() => maximizeWindow()}>
-      <img src={`/images/${app.name}.png`} style={{width:'50%'}} alt={app.name}></img>
+    <div className={`item ${top == app.name ? "selected window glass" : ""}`}  onClick={() => maximizeWindow()}>
+      <img className="item-icon" src={`/images/${app.name}.png`}  alt={app.name}></img>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import "./StartMenu.css";
 
 const StartMenu = () => {
   return (
-    <div className="start-menu-content glass">
+    <div className="start-menu-content ">
       {/* Profile Section */}
       <div className="profile-section">
         <img
@@ -11,7 +11,7 @@ const StartMenu = () => {
           alt="Profile"
           className="profile-picture"
         />
-        <span className="profile-name">Akshay Gopal</span>
+        <span className="profile-name">Akshay Gopal S</span>
         <span style={{color:"lightgray"}}>FullStack Developer</span>
       </div>
 

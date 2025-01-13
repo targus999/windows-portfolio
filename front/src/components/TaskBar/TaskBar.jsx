@@ -1,7 +1,6 @@
 import React, { useState,useEffect } from "react";
 import "./TaskBar.css";
 import moment from 'moment';
-import startIcon from "./start-button.png";
 import StartMenu from "../StartMenu/StartMenu";
 import { useDispatch, useSelector} from "react-redux";
 import TaskItem from "../TaskItem/TaskItem";
@@ -28,7 +27,7 @@ const TaskBar = () => {
         <div className="start-left">
           <div className="start-icon-container">
             <img
-              src={startIcon}
+              src='/images/startIcon.png'
               onClick={() => dispatch(toggleStart())}
               className="start-icon"
               alt="Start Icon"

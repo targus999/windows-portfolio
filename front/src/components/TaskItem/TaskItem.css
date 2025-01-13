@@ -1,5 +1,15 @@
 .item{
-    height: 90%;
-    width: 15%;
-    border: 1px solid white;
+    height: 95%;
+    
+    margin-left: 10px;
+    object-fit: cover;
+    box-sizing: border-box;
+    
+}
+
+.item-icon{
+    height: 80%;
+    
+    /* aspect-ratio: 1/1; */
+    object-fit: cover;
 }

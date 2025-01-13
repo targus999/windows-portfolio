@@ -24,6 +24,10 @@ export const toggleStart = () => ({
     type: "maximizeApp",
     appName,
   });
+  export const toggleApp = (appName) => ({
+    type: "toggleApp",
+    appName,
+  });
   export const removeFromActiveApps = (oldApp) => ({
     type: "removeFromActiveApps",
     oldApp,
