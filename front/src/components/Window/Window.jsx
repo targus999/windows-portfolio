@@ -18,7 +18,7 @@ const Window = ({ app }) => {
   };
 
   const styling = {
-    zIndex: useSelector((state) => state.top) === app.name ? "1" : "0",
+    zIndex: useSelector((state) => state.top)[0] === app.name ? "1" : "0",
     display: app.minimize ? "none" : "block",
   };
 

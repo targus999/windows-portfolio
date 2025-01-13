@@ -1,38 +1,41 @@
 const initialState = {
-  top: null,
+  top: [],
   apps: [
     { name: "My Expertise", active: false, minimize: false },
     { name: "Resume.pdf", active: false, minimize: false },
     { name: "My Hobbies", active: false, minimize: false },
   ],
   activeApps: [],
-  isSelected:"",
-  showStartBar:false,
+  isSelected: "",
+  showStartBar: false,
 };
 
+
 const reducer = (state = initialState, action) => {
+
   switch (action.type) {
     case "setTop":
-      return {
-        ...state,
-        top: action.top,
-      };
-      case "setSelected":
+      if (state.top[0] != action.top)
+        return {
+          ...state,
+          top: [action.top, ...state.top.filter((app) => app !== action.top)],
+        };
+    case "setSelected":
       return {
         ...state,
         isSelected: action.selectedApp,
       };
-      case "setStart":
+    case "setStart":
       return {
         ...state,
         showStartBar: false,
       };
-      case "toggleStart":
+    case "toggleStart":
       return {
         ...state,
         showStartBar: !state.showStartBar,
       };
-      case "maximizeApp":
+    case "maximizeApp":
       return {
         ...state,
         apps: state.apps.map((app) => {
@@ -45,7 +48,7 @@ const reducer = (state = initialState, action) => {
           return app;
         }),
       };
-      case "toggleApp":
+    case "toggleApp":
       return {
         ...state,
         apps: state.apps.map((app) => {
@@ -58,7 +61,7 @@ const reducer = (state = initialState, action) => {
           return app;
         }),
       };
-      case "minimizeApp":
+    case "minimizeApp":
       return {
         ...state,
         apps: state.apps.map((app) => {
@@ -100,6 +103,13 @@ const reducer = (state = initialState, action) => {
         }),
         activeApps: state.activeApps.filter(
           (app) => app.name !== action.oldApp
+        ),
+      };
+    case "removeFromTop":
+      return {
+        ...state,
+        top: state.top.filter(
+          (app) => app !== action.oldApp
         ),
       };
     default:

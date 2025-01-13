@@ -1,16 +1,20 @@
 import React from "react";
 import "./TaskItem.css";
-import { maximizeApp, setStart, setTop, toggleApp } from "../../redux/actions";
+import { maximizeApp, removeFromTop, setStart, setTop, toggleApp } from "../../redux/actions";
 import { useSelector, useDispatch } from "react-redux";
 
 const TaskItem = ({ app }) => {
   const dispatch = useDispatch();
-  const top = useSelector((state) => state.top);
+  const top = useSelector((state) => state.top)[0];
   const maximizeWindow = () => {
     if (top == app.name) {
+      dispatch(removeFromTop(app.name));
       dispatch(toggleApp(app.name));
     } else {
+      console.log("hre");
+      dispatch(maximizeApp(app.name));
       dispatch(setTop(app.name));
+      
     }
     dispatch(setStart())
   };

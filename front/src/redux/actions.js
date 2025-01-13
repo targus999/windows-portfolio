@@ -32,3 +32,7 @@ export const toggleStart = () => ({
     type: "removeFromActiveApps",
     oldApp,
   });
+  export const removeFromTop = (oldApp) => ({
+    type: "removeFromTop",
+    oldApp,
+  });

@@ -1,7 +1,7 @@
 import React from "react";
 import "./TopBar.css";
 
-import { minimizeApp, removeFromActiveApps } from "../../redux/actions";
+import { minimizeApp, removeFromActiveApps, removeFromTop } from "../../redux/actions";
 import { useSelector, useDispatch } from "react-redux";
 
 const TopBar = ({ name }) => {
@@ -9,14 +9,16 @@ const TopBar = ({ name }) => {
 
   const close = () => {
     dispatch(removeFromActiveApps(name));
+    dispatch(removeFromTop(name));
   };
 
   const minimizeWindow=()=>{
     dispatch(minimizeApp(name));
+    dispatch(removeFromTop(name));
   }
 
   return (
-      <div className={useSelector((state) => state.top) == name ? " title-bar active" : "title-bar"}>
+      <div className={useSelector((state) => state.top)[0] == name ? " title-bar active" : "title-bar"}>
         <div className="title-bar-text">{name}</div>
         <div className="title-bar-controls">
           <button aria-label="Minimize"onClick={() => minimizeWindow()}></button>

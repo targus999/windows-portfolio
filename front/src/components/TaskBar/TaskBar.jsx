@@ -31,7 +31,6 @@ const TaskBar = () => {
               onClick={() => dispatch(toggleStart())}
               className="start-icon"
               alt="Start Icon"
-              onFocus={()=>{console.log("HI");}}
             />
           </div>
           <div className="start-apps-container">
