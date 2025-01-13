@@ -18,7 +18,7 @@ const TopBar = ({ name }) => {
   }
 
   return (
-      <div className={useSelector((state) => state.top)[0] == name ? " title-bar active" : "title-bar"}>
+      <div className={useSelector((state) => state.top)[0] === name ? " title-bar active" : "title-bar"}>
         <div className="title-bar-text">{name}</div>
         <div className="title-bar-controls">
           <button aria-label="Minimize"onClick={() => minimizeWindow()}></button>

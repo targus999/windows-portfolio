@@ -15,16 +15,18 @@ const reducer = (state = initialState, action) => {
 
   switch (action.type) {
     case "setTop":
-      if (state.top[0] != action.top)
+      if (state.top[0] !== action.top)
         return {
           ...state,
           top: [action.top, ...state.top.filter((app) => app !== action.top)],
         };
+        else return state; 
     case "setSelected":
       return {
         ...state,
         isSelected: action.selectedApp,
       };
+      
     case "setStart":
       return {
         ...state,
@@ -89,6 +91,7 @@ const reducer = (state = initialState, action) => {
           }),
           activeApps: [...state.activeApps, action.newApp],
         };
+        else return state;
     case "removeFromActiveApps":
       return {
         ...state,

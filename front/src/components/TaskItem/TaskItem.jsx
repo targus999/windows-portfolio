@@ -7,7 +7,7 @@ const TaskItem = ({ app }) => {
   const dispatch = useDispatch();
   const top = useSelector((state) => state.top)[0];
   const maximizeWindow = () => {
-    if (top == app.name) {
+    if (top === app.name) {
       dispatch(removeFromTop(app.name));
       dispatch(toggleApp(app.name));
     } else {
@@ -20,7 +20,7 @@ const TaskItem = ({ app }) => {
   };
 
   return (
-    <div className={`item ${top == app.name ? "selected window glass" : ""}`}  onClick={() => maximizeWindow()}>
+    <div className={`item ${top === app.name ? "selected window glass" : ""}`}  onClick={() => maximizeWindow()}>
       <img className="item-icon" src={`/images/${app.name}.png`}  alt={app.name}></img>
     </div>
   );
