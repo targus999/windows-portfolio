@@ -1,0 +1,49 @@
+.gallery-list{
+  height: 200px;
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+ 
+}
+.inner-icon{
+    margin-top: 10%;
+    margin-left:10%;
+    z-index: inherit;
+    height:15%;
+    width: 100%;
+    
+}
+.inner-desktop {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .inner-desktop-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    width: 90%;
+    
+  }
+  
+  .inner-desktop-icon:hover {
+    filter: brightness(1.05);
+  }
+  
+  .inner-desktop-icon.selected {
+    /* border: 1px dotted #000102; */
+    /* border: 2px solid rgba(0, 120, 212, 0.7); */
+    background-color: rgba(173, 216, 230, 0.2);
+    
+  }
+  
+  .inner-desktop-icon img {
+    width: 64px;
+    height: 64px;
+    margin-top: 8px;
+  }

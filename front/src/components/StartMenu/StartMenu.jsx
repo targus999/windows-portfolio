@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./StartMenu.css";
 
-const StartMenu = () => {
+const StartMenu = ({links}) => {
+  
   return (
     <div className="start-menu-content ">
       {/* Profile Section */}
@@ -11,17 +12,16 @@ const StartMenu = () => {
           alt="Profile"
           className="profile-picture"
         />
-        <span className="profile-name">Akshay Gopal S</span>
-        <span style={{color:"lightgray"}}>FullStack Developer</span>
+        <span className="profile-name">{links["my-name"]}</span>
+        <span style={{color:"lightgray"}}>{links["title"]}</span>
       </div>
 
       {/* Menu Items */}
       <div className="menu-items">
-        <button className="menu-item"onClick={() => window.open('https://github.com/targus999', '_blank')}>Github</button>
-        <button className="menu-item"onClick={() => window.open('https://www.linkedin.com/in/akshay-gopal-b501b1180/', '_blank')}>LinkedIn</button>
-        <button className="menu-item"onClick={() => window.location.href = 'mailto:meetakshay.gopal@gmail.com?'}>Email me</button>
-        <button className="menu-item"onClick={() => window.open('https://www.instagram.com/akshay.5787/', '_blank')}> Instagram (personal)</button>
-        <button className="menu-item"onClick={() => window.open('https://www.youtube.com/@akshaygopal8627', '_blank')}> Youtube</button>
+        {links?.socials?.map((social) => (
+          <button className="menu-item"onClick={() => window.open(social.url, '_blank')}>{social.name}</button>
+        ))}
+        <button className="menu-item"onClick={() => window.location.href = `mailto:${links['my-email']}`}>Email me</button>
         
         <input className="search-item" type="search" placeholder="Search" />
       </div>

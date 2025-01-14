@@ -8,6 +8,7 @@ import Window from "./components/Window/Window";
 import DesktopIcons from "./components/DesktopIcons/DesktopIcons";
 import { useEffect } from "react";
 import { setSelected, setStart } from "./redux/actions";
+import ActivateWindowsMessage from "./components/ActivateWindows/ActivateWindows";
 
 function App() {
   const dispatch=useDispatch();
@@ -51,6 +52,7 @@ function App() {
       {useSelector((state) => state.apps)?.map(
         (i, key) => i.active && <Window key={key} app={i}></Window>
       )}
+      <ActivateWindowsMessage />
     </div>
   );
 }

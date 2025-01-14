@@ -1,0 +1,24 @@
+{
+    "my-name":"Akshay Gopal S",
+    "title":"FullStack Developer",
+    "my-email":"meetakshay.gopal@gmail.com",
+    "socials": [
+        {
+            "name": "Github",
+            "url": "https://github.com/targus999"
+        },
+        {
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/in/akshay-gopal-b501b1180/"
+        },
+        {
+            "name": "Instagram",
+            "url": "https://www.linkedin.com/in/akshay-gopal-b501b1180/"
+        },
+        {
+            "name": "Youtube",
+            "url": "https://www.linkedin.com/in/akshay-gopal-b501b1180/"
+        }
+        
+    ]
+}

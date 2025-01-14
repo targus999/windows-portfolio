@@ -7,6 +7,8 @@ import TopBar from "../TopBar/TopBar";
 import { setStart, setTop } from "../../redux/actions";
 import PdfViewer from "../PdfViewer/PdfViewer";
 import Notepad from "../Notepad/Notepad";
+import Gallery from "../Gallery/Gallery";
+import GalleryList from "../GalleryList/GalleryList";
 
 const Window = ({ app }) => {
   const dispatch = useDispatch();
@@ -59,7 +61,7 @@ const Window = ({ app }) => {
               case "My Hobbies":
                 return (
                   <>
-                    <h1>HOBBY</h1>
+                    <GalleryList></GalleryList>
                   </>
                 );
 
