@@ -21,7 +21,7 @@ const TaskItem = ({ app }) => {
 
   return (
     <div className={`item ${top === app.name ? "selected window glass" : ""}`}  onClick={() => maximizeWindow()}>
-      <img className="item-icon" src={`/images/${app.name}.png`}  alt={app.name}></img>
+      <img className="item-icon" src={`/images/${app.name.replace(/ /g, "-")}.png`}  alt={app.name}></img>
     </div>
   );
 };

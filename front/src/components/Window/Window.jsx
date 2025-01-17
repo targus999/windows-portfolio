@@ -58,7 +58,7 @@ const Window = ({ app }) => {
                     <PdfViewer></PdfViewer>
                 );
 
-              case "My Hobbies":
+              case "My Achievements":
                 return (
                   <>
                     <GalleryList></GalleryList>

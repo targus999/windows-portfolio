@@ -1,10 +1,21 @@
 import React, { useEffect, useRef } from "react";
 import LightGallery from "lightgallery/react";
 import "lightgallery/css/lightgallery.css";
+import { IMAGE_COUNT } from "../../constants/constants";
 
 const Gallery = ({ fileName ,setter}) => {
-    console.log(fileName);
-    
+    const getImagesArray = (fileName) => {
+        const imagesArray = [];
+
+        for (let i = 1; i <= IMAGE_COUNT[fileName]; i++) {
+            imagesArray.push({
+                src: `/images/gallery/${fileName}/${i}.jpg`
+            });
+        }
+        
+        return imagesArray;
+    }
+
     const onGalleryClose = () => {
         setter(null); // Reset the opened file
     };
@@ -16,7 +27,6 @@ const Gallery = ({ fileName ,setter}) => {
         if (lgInstance.current) {
             lgInstance.current.openGallery(0); // Open the gallery at the first image (index 0)
         }
-
     }, []);
 
     return (
@@ -25,9 +35,7 @@ const Gallery = ({ fileName ,setter}) => {
             speed={500}
             dynamic
             plugins={[]}
-            dynamicEl={[
-                { src: `/images/${fileName}.png` },
-            ]}
+            dynamicEl={getImagesArray(fileName)}
             onInit={(detail) => {
                 lgInstance.current = detail.instance; // Store the LightGallery instance
             }}

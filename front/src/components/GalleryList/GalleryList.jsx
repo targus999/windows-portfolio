@@ -3,7 +3,7 @@ import "./GalleryList.css";
 import Gallery from "../Gallery/Gallery";
 
 // Mock file list
-const fileList = ["Certificate", "Hobbies"];
+const fileList = ["Certificates", "Hobbies"];
 
 const GalleryList = () => {
     const [selected, setSelected] = useState(null); // Currently selected file
@@ -26,7 +26,7 @@ const GalleryList = () => {
                         className={`inner-desktop-icon ${selected === file ? "selected" : ""}`}
                         onClick={() => handleIconClick(file)}
                     >
-                        <img src={`/images/My Hobbies.png`} alt={file} />
+                        <img src={`/images/gallery.png`} alt={file} />
                         <p>{file}</p>
                     </div>
                 </div>

@@ -3,7 +3,7 @@ const initialState = {
   apps: [
     { name: "My Skills", active: false, minimize: false },
     { name: "Resume.pdf", active: false, minimize: false },
-    { name: "My Hobbies", active: false, minimize: false },
+    { name: "My Achievements", active: false, minimize: false },
   ],
   activeApps: [],
   isSelected: "",
