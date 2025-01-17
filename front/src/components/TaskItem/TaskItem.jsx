@@ -11,7 +11,6 @@ const TaskItem = ({ app }) => {
       dispatch(removeFromTop(app.name));
       dispatch(toggleApp(app.name));
     } else {
-      console.log("hre");
       dispatch(maximizeApp(app.name));
       dispatch(setTop(app.name));
       

@@ -7,7 +7,6 @@ import TopBar from "../TopBar/TopBar";
 import { setStart, setTop } from "../../redux/actions";
 import PdfViewer from "../PdfViewer/PdfViewer";
 import Notepad from "../Notepad/Notepad";
-import Gallery from "../Gallery/Gallery";
 import GalleryList from "../GalleryList/GalleryList";
 
 const Window = ({ app }) => {
@@ -25,8 +24,8 @@ const Window = ({ app }) => {
   };
 
   const initialPosition = {
-    x: window.innerWidth / 4,
-    y: window.innerHeight / 6,
+    x: app.name === "Resume.pdf" ? window.innerWidth / 6 : window.innerWidth / 2,
+    y: app.name === "My Achievements" ? window.innerHeight / 2 : window.innerHeight / 6,
   };
 
   const setAsTop = () => {
@@ -55,7 +54,7 @@ const Window = ({ app }) => {
 
               case "Resume.pdf":
                 return (
-                    <PdfViewer></PdfViewer>
+                  <PdfViewer></PdfViewer>
                 );
 
               case "My Achievements":

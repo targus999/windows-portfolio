@@ -1,12 +1,11 @@
 import React from "react";
 import "./Icon.css";
 import { useDispatch, useSelector } from "react-redux";
-import { addToActiveApps, maximizeApp, minimizeApp, setSelected, setStart, setTop } from "../../redux/actions";
+import { addToActiveApps, maximizeApp,  setSelected, setStart, setTop } from "../../redux/actions";
 import { useState } from "react";
 
 const Icon = ({ appName }) => {
   const dispatch = useDispatch();
-  const [isSelected, setIsSelected] = useState(false);
 
   const handleIconClick = () => {
     dispatch(setSelected(appName));
