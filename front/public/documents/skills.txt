@@ -1,5 +1,7 @@
-SKILLS
-  
+============
+== SKILLS ==
+============
+
 FRONTEND
 1.ReactJS
 2.HTML
@@ -21,6 +23,12 @@ DEVOPS
 1.Docker(Rancher/Docker desktop)
 2.Kubernetes
 3.Ansible
+
+Blockchain
+1.Solidity
+2.IPFS
+3.ChainLink
+4.Foundry
 
 CLOUD
 1.AWS Cloud
