@@ -1,0 +1,52 @@
+
+
+/* Notepad styles for large screens */
+@media screen and (min-width: 1200px) {
+    .notepad-container {
+        width: 700px;
+    }
+}
+@media screen and (min-height: 1200px) {
+    .notepad-container {
+        height: 700px;
+    }
+}
+
+
+
+/* Media query for medium screens */
+@media screen and (max-width: 1200px) {
+    .notepad-container {
+        width: 400px;
+    }
+}
+@media screen and (max-height: 1200px) {
+    .notepad-container {
+        height: 500px;
+    }
+}
+
+
+/* Media query for small screens  */
+@media screen and (max-width: 600px) {
+    .notepad-container {
+        max-width: 300px;
+    }
+}
+@media screen and (max-height: 600px) {
+    .notepad-container {
+        max-height: 300px;
+    }
+}
+
+/* Media query for very small screens (e.g., phones) */
+@media screen and (max-width: 400px) {
+    .notepad-container {
+        max-width: 200px;
+    }
+}
+@media screen and (max-height: 400px) {
+    .notepad-container {
+        max-height: 200px;
+    }
+}

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./Notepad.css";
 
 const Notepad = () => {
   const [text, setText] = useState();
@@ -16,7 +17,7 @@ const Notepad = () => {
   };
 
   return (
-    <div style={{ width: "700px", height: "500px" }}>
+    <div className="notepad-container">
       <ul role="menubar">
         <li role="menuitem" tabIndex="0">
           File

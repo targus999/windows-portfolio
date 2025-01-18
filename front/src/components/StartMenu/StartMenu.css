@@ -3,8 +3,8 @@
   position: fixed;
   bottom: 7%; /* Align above the taskbar */
   left: 0px;
-  height: 65%;
-  width: 300px;
+  
+  
   /* background-color: black; */
   /* opacity: 0.7; */
   /* box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, .7), inset 0 0 0 1px black; */
@@ -27,15 +27,106 @@
 }
 
 
+
+/* For screens wider than 1200px (Large Desktops) */
+@media screen and (min-width: 1200px) {
+  .start-menu-content {
+    width: 20%;
+    height: 65%;
+  }
+  .menu-items {
+    height: 70%;
+  }
+}
+
+/* For screens between 900px and 1200px (Tablets or smaller desktops) */
+@media screen and (max-width: 1200px) {
+  .start-menu-content {
+    width: 30%;
+    height: 500px;
+  }
+  .menu-items {
+    height: 300px;
+  }
+}
+
+/* For screens between 600px and 900px (Large phones or tablets) */
+@media screen and (max-width: 900px) {
+  .start-menu-content {
+    width: 40%;
+    height: 450px;
+  }
+  .menu-items {
+    height: 250px;
+  }
+}
+
+/* For screens between 400px and 600px (Mid-size phones) */
+@media screen and (max-width: 600px) {
+  .start-menu-content {
+    width: 50%;
+    height: 400px;
+  }
+  .menu-items {
+    height: 200px;
+  }
+}
+
+/* For screens smaller than 400px (Small phones) */
+@media screen and (max-width: 400px) {
+  .start-menu-content {
+    width: 60%;
+    height: 350px;
+  }
+  .menu-items {
+    height: 180px;
+  }
+
+  .profile-section {
+    top: -15%;
+    right: 5%;
+  }
+
+  .profile-picture {
+    width: 60px;
+    height: 60px;
+  }
+
+  .profile-name {
+    font-size: 14px;
+  }
+
+  .menu-item, .search-item {
+    font-size: 12px;
+    padding: 6px;
+  }
+}
+
+/* For very short screens (Landscape mode on phones) */
+@media screen and (max-height: 400px) {
+  .start-menu-content {
+    height: 80%;
+    width: 60%;
+  }
+
+  .menu-items {
+    height: 150px;
+  }
+}
+
+
+
+
 /* Profile Section */
 .profile-section {
+  /* width: 50%; */
   position: absolute; /* Position the element relative to its nearest positioned ancestor */
   top: -10%; /* Align to the top */
   right: 10%; /* Align to the right */
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10px; /* Add some spacing from the edges, optional */
+  /* /* margin: 10px;  */
 }
 
 .profile-picture {
@@ -62,7 +153,7 @@
   width: 60%;
   margin-top: 10px;
   background: rgb(255, 255, 255);
-  
+  overflow: hidden;
   padding: 10px;
   border-top-left-radius: 5px; /* Apply border radius to top-left corner */
   border-top-right-radius: 5px; /* Apply border radius to top-right corner */
@@ -77,7 +168,7 @@
   background: linear-gradient(to bottom, #ffffff, #e9e9e9);
   border: 1px solid #aaa;
   border-radius: 5px;
-  padding: 8px;
+  /* padding: 8px; */
   width: 100%;
   margin: 5px 0;
   text-align: left;
@@ -97,14 +188,14 @@
 
 
 .search-item {
+ width: 100%;
  
-  margin-top: 10%;
   background: linear-gradient(to bottom, #ffffff, #e9e9e9);
   border: 1px solid #aaa;
   border-radius: 5px;
   padding: 8px 10px;
   font-size: 14px;
-  /* margin: 10%; */
+  
  
 }
 

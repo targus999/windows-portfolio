@@ -39,6 +39,7 @@ const Window = ({ app }) => {
       bounds={screenBounds}
       defaultPosition={initialPosition}
       handle="strong"
+      cancel="button"
     >
       <div className="window-box" style={styling}>
         <strong className="cursor glass active">

@@ -1,6 +1,7 @@
 .icon{
-    margin-top: 10%;
-    margin-left:10%;
+    box-sizing: content-box;
+    margin-bottom: 10%;
+    
     z-index: inherit;
     height:15%;
     

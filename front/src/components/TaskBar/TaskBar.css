@@ -59,10 +59,48 @@
 
   color: white;
   display: flex;
-  align-items: center;
+  align-items: end;
   flex-direction: column;
   justify-content: center;
   padding-right: 20px;
 }
 
-/* Add more styles for TaskItem if needed */
+/* For large screens (Desktops, 1200px and above) */
+@media screen and (min-width: 1200px) {
+  .start-right {
+    font-size: 12px; /* Default text size */
+    padding-right: 20px; /* Default padding */
+  }
+}
+
+/* For medium screens (Tablets, 900px to 1200px) */
+@media screen and (max-width: 1200px) {
+  .start-right {
+    font-size: 10px; /* Slightly smaller text */
+    padding-right: 15px; /* Reduced padding */
+  }
+}
+
+/* For small screens (Large phones or small tablets, 600px to 900px) */
+@media screen and (max-width: 900px) {
+  .start-right {
+    font-size: 9px; /* Smaller text */
+    padding-right: 10px; /* Reduced padding */
+  }
+}
+
+/* For extra small screens (Phones, 400px to 600px) */
+@media screen and (max-width: 600px) {
+  .start-right {
+    font-size: 8px; /* Smaller text */
+    padding-right: 8px; /* Reduced padding */
+  }
+}
+
+/* For very small screens (Small phones, below 400px) */
+@media screen and (max-width: 400px) {
+  .start-right {
+    font-size: 8px; /* Smallest text */
+    padding-right: 5px; /* Minimum padding */
+  }
+}

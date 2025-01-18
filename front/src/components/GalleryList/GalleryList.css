@@ -1,6 +1,56 @@
+/* gallery styles for large screens */
+@media screen and (min-width: 1200px) {
+  .gallery-list {
+      width: 700px;
+  }
+}
+@media screen and (min-height: 1200px) {
+  .gallery-list {
+      height: 400px;
+  }
+}
+
+
+
+/* Media query for medium screens */
+@media screen and (max-width: 1200px) {
+  .gallery-list {
+      width: 400px;
+  }
+}
+@media screen and (max-height: 1200px) {
+  .gallery-list {
+      height: 350px;
+  }
+}
+
+
+/* Media query for small screens  */
+@media screen and (max-width: 600px) {
+  .gallery-list {
+      max-width: 200px;
+  }
+}
+@media screen and (max-height: 600px) {
+  .gallery-list {
+      max-height: 300px;
+  }
+}
+
+/* Media query for very small screens (e.g., phones) */
+@media screen and (max-width: 400px) {
+  .gallery-list {
+      max-width: 100px;
+  }
+}
+@media screen and (max-height: 400px) {
+  .gallery-list {
+      max-height: 200px;
+  }
+}
+
+
 .gallery-list{
-  height: 200px;
-  width: 500px;
   display: flex;
   flex-direction: row;
   justify-content: left;
