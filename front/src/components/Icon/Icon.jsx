@@ -25,7 +25,7 @@ const Icon = ({ appName }) => {
         className={`desktop-icon ${useSelector((state) => state.isSelected)===appName ? "selected" : ""}`}
         onClick={handleIconClick}
       >
-        <img src={`/images/${appName.replace(/ /g, "-")}.png`}  alt={appName.png} />
+        <img src={`/images/${appName.replace(/ /g, "-")}.webp`}  alt={'icon'} />
         <p>{appName }</p>
       </div>
     </div>

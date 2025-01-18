@@ -35,7 +35,7 @@ function App() {
   }, []);
 
   const backgroundStyle = {
-    backgroundImage: `url(/images/flag.png)`,
+    backgroundImage: `url(/images/flag.webp)`,
     backgroundSize: "cover",
     backgroundPosition: "center center",
     backgroundRepeat: "no-repeat",

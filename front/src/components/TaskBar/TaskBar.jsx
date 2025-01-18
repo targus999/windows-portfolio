@@ -43,7 +43,7 @@ const TaskBar = () => {
         <div className="start-left">
           <div className="start-icon-container">
             <img
-              src='/images/startIcon.png'
+              src='/images/startIcon.webp'
               onClick={() => dispatch(toggleStart())}
               className="start-icon"
               alt="Start Icon"

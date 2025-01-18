@@ -26,7 +26,7 @@ const GalleryList = () => {
                         className={`inner-desktop-icon ${selected === file ? "selected" : ""}`}
                         onClick={() => handleIconClick(file)}
                     >
-                        <img src={`/images/gallery.png`} alt={file} />
+                        <img src={`/images/gallery.webp`} alt={file} />
                         <p>{file}</p>
                     </div>
                 </div>
