@@ -9,7 +9,7 @@ const Gallery = ({ fileName ,setter}) => {
 
         for (let i = 1; i <= IMAGE_COUNT[fileName]; i++) {
             imagesArray.push({
-                src: `/images/gallery/${fileName}/${i}.jpg`
+                src: `/images/gallery/${fileName}/${i}.webp`
             });
         }
         
